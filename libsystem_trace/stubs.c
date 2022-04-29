@@ -558,7 +558,7 @@ os_trace_info_enabled(void) {
 }
 
 void
-os_trace_set_mode(void) {
+os_trace_set_mode(int value) {
 	_libtrace_assert_fail("os_trace_set_mode: Function unimplemented");
 }
 
