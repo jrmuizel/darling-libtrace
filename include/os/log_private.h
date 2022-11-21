@@ -6,7 +6,9 @@
 #include <time.h>
 #include <sys/queue.h>
 
-OS_EXPORT OS_NOT_TAIL_CALLED
+__BEGIN_DECLS
+
+OS_EXPORT OS_NOTHROW OS_NOT_TAIL_CALLED OS_NONNULL5
 void os_log_with_args(os_log_t oslog, os_log_type_t type, const char *format, va_list args, void *ret_addr);
 
 OS_ENUM(oslog_stream_link_type, uint8_t,
@@ -43,5 +45,7 @@ void os_log_pack_send(os_log_pack_t pack, os_log_t log, os_log_type_t type);
 
 OS_EXPORT
 int os_log_shim_enabled(void* return_address);
+
+__END_DECLS
 
 #endif // _LIBTRACE_OS_LOG_PRIVATE_H_
