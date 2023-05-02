@@ -31,4 +31,4 @@ add_circular(system_trace FAT
 add_darling_static_library(system_trace_static FAT SOURCES $<TARGET_OBJECTS:system_trace_obj>)
 
 install(TARGETS system_trace DESTINATION libexec/darling/usr/lib/system)
-install(FILES libsystem_trace/org.puredarwin.os_log.asl DESTINATION libexec/darling/etc/asl)
+install(FILES libsystem_trace/org.puredarwin.os_log.asl DESTINATION libexec/darling/private/etc/asl)
